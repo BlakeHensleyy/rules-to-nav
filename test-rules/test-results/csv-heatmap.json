@@ -1,0 +1,66 @@
+{
+    "name": "csv rules heatmap",
+    "versions": {
+        "attack": "16",
+        "navigator": "4.4.4",
+        "layer": "4.2"
+    },
+    "domain": "enterprise-attack",
+    "description": "Csv rules heatmap",
+    "gradient": {
+        "colors": [
+            "#E0FFFF",
+            "#00CED1",
+            "#00008B"
+        ],
+        "maxValue": 1,
+        "minValue": 0
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1020",
+            "score": 1,
+            "comment": "I am exfiltration!"
+        },
+        {
+            "techniqueID": "T1030",
+            "score": 1,
+            "comment": "I am exfiltration pt2"
+        },
+        {
+            "techniqueID": "T1048.001",
+            "score": 1,
+            "comment": "I am exfiltration pt3"
+        },
+        {
+            "techniqueID": "T1041",
+            "score": 1,
+            "comment": "I am exfiltration pt4"
+        },
+        {
+            "techniqueID": "T1011",
+            "score": 1,
+            "comment": "I am exfiltration pt5"
+        },
+        {
+            "techniqueID": "T1052",
+            "score": 1,
+            "comment": "I am exfiltration pt5"
+        },
+        {
+            "techniqueID": "T1567.003",
+            "score": 1,
+            "comment": "I am exfiltration pt5"
+        },
+        {
+            "techniqueID": "T1029",
+            "score": 1,
+            "comment": "I am exfiltration pt5"
+        },
+        {
+            "techniqueID": "T1537",
+            "score": 1,
+            "comment": "I am exfiltration pt5"
+        }
+    ]
+}

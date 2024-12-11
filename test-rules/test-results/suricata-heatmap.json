@@ -1,0 +1,56 @@
+{
+    "name": "suricata rules heatmap",
+    "versions": {
+        "attack": "16",
+        "navigator": "4.4.4",
+        "layer": "4.2"
+    },
+    "domain": "enterprise-attack",
+    "description": "Suricata rules heatmap",
+    "gradient": {
+        "colors": [
+            "#E0FFFF",
+            "#00CED1",
+            "#00008B"
+        ],
+        "maxValue": 94,
+        "minValue": 0
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1496",
+            "score": 13,
+            "comment": "BitCoinMiner.MultiThreat Stratum Protocol Mining.Notify Initial Connection Server Response\nBitCoinMiner.MultiThreat Stratum Protocol Mining.Notify Work Server Response\nBitCoinMiner.MultiThreat Getblocktemplate Protocol Server Connection\nBitCoinMiner.MultiThreat Getblocktemplate Protocol Server Coinbasetxn Begin Mining Response\nET COINMINER CoinMiner Malicious Authline Seen in JAR Backdoor\nET COINMINER CoinMiner Malicious Authline Seen After CVE-2017-10271 Exploit\nET COINMINER Cryptexplorer API Check - Potential CoinMiner Traffic\nET COINMINER PrimeCoinMiner.Protominer\nET COINMINER Observed DNS Query to Browser Coinminer (crypto-loot[.]com)\nET COINMINER Observed DNS Query to herominers Domain (herominers .com)\nAuthorize Stratum Protocol Message\nET COINMINER Panchan Mining Rig CnC Activity (Outbound)\nBitCoinMiner Fake Flash Player Distribution Campaign - December 2013"
+        },
+        {
+            "techniqueID": "T1190",
+            "score": 94,
+            "comment": "ET WEB_SERVER Possible CVE-2015-1427 Elastic Search Sandbox Escape Remote Code Execution Attempt\nET WEB_SERVER PHP Possible file Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible php Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible ftps Local File Inclusion Attempt\nET WEB_SERVER PHP Possible ftp Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible https Local File Inclusion Attempt\nET WEB_SERVER PHP Possible zlib Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible data Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible glob Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible phar Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible ssh2 Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible rar Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible ogg Remote File Inclusion Attempt\nET WEB_SERVER PHP Possible expect Remote File Inclusion Attempt\nET WEB_SERVER SQL Injection BULK INSERT in URI to Insert File Content into Database Table\nET WEB_SERVER Possible CVE-2014-3120 Elastic Search Remote Code Execution Attempt\nET WEB_SERVER SQL Injection Select Sleep Time Delay\nET WEB_SERVER SELECT USER SQL Injection Attempt in URI\nCURTIME SQL Injection Attempt in URI\nET WEB_SERVER SHOW TABLES SQL Injection Attempt in URI\nET WEB_SERVER Possible INSERT VALUES SQL Injection Attempt\nET WEB_SERVER SELECT INSTR in URI Possible ORACLE Related Blind SQL Injection Attempt\nET WEB_SERVER Possible PHP Remote Code Execution CVE-2019-11043 PoC (Inbound)\nET WEB_SERVER lolzilla WebSkimmer - Remote Code Execution Attempt M1\nET WEB_SERVER lolzilla WebSkimmer - Remote Code Execution Attempt M2\nET WEB_SERVER lolzilla WebSkimmer - Remote Code Execution Attempt M3\nET WEB_SERVER lolzilla WebSkimmer - Remote Code Execution Attempt M4\nET WEB_SERVER lolzilla WebSkimmer - Remote Code Execution Attempt M5\nET WEB_SERVER SHOW VARIABLES SQL Injection Attempt in URI\nET WEB_SERVER Possible Oracle SQL Injection utl_inaddr call in URI\nSessionManager Backdoor ReadFile Command (Inbound)\nET WEB_SERVER PHP Generic Remote File Include Attempt (HTTPS)\nET WEB_SERVER PHP Generic Remote File Include Attempt (FTP)\nET WEB_SERVER PHP Generic Remote File Include Attempt (FTPS)\nET WEB_SERVER Possible ALTER SQL Injection Attempt\nET WEB_SERVER Possible DROP SQL Injection Attempt\nET WEB_SERVER Possible CREATE SQL Injection Attempt in URI\nET WEB_SERVER SQL Injection Attempt (Agent CZ32ts)\nET WEB_SERVER XML-RPC for PHP Remote Code Injection\nET WEB_SERVER SQL Injection Attempt (Agent NV32ts)\nET WEB_SERVER PHP Possible http Remote File Inclusion Attempt\nET WEB_SERVER Light Weight Calendar 'date' Arbitrary Remote Code Execution\nET WEB_SERVER PHP Generic Remote File Include Attempt (HTTP)\nET WEB_SERVER SQL Injection List Priveleges Attempt\nET WEB_SERVER Possible Usage of MYSQL Comments in URI for SQL Injection\nET WEB_SERVER SHOW CHARACTER SET SQL Injection Attempt in URI\nING in Cookie, Possible Blind SQL Injection Attempt\nET WEB_SERVER SELECT INSTR in Cookie, Possible ORACLE Related Blind SQL Injection Attempt\nET WEB_SERVER Possible INTO OUTFILE Arbitrary File Write SQL Injection In Cookie\nET WEB_SERVER Possible INSERT INTO SQL Injection In Cookie\nET WEB_SERVER Possible DELETE FROM SQL Injection In Cookie\nET WEB_SERVER Possible SELECT FROM SQL Injection In Cookie\nET WEB_SERVER Possible UNION SELECT SQL Injection In Cookie\nET WEB_SERVER SQL Injection Attempt (Agent CZxt2s)\nET WEB_SERVER Microsoft IIS Remote Code Execution (CVE-2017-7269)\nET WEB_SERVER Generic PHP Remote File Include\nET WEB_SERVER Possible SQL Injection (varchar2) in HTTP Request Body\nET WEB_SERVER Possible SQL Injection CHAR() in HTTP Request Body M1\nET WEB_SERVER Possible SQL Injection CHAR() in HTTP Request Body M2\nET WEB_SERVER Possible SQL Injection CHR() in HTTP Request Body M1\nET WEB_SERVER Possible SQL Injection CHR() in HTTP Request Body M2\nET WEB_SERVER Possible SQL Injection sp_configure in HTTP Request Body\nET WEB_SERVER Possible SQL Injection (varchar) in HTTP Request Body\nET WEB_SERVER Possible SQL Injection (exec) in HTTP Request Body\nET WEB_SERVER Possible SQL Injection (declare) in HTTP Request Body\nET WEB_SERVER Possible SQL Injection INTO OUTFILE in HTTP Request Body\nET WEB_SERVER Possible SQL Injection Obfuscated by REVERSE function in HTTP Request Body\nET WEB_SERVER Possible SQL Injection SELECT CONCAT in HTTP Request Body\nET WEB_SERVER Possible SQL Injection UNION SELECT in HTTP Request Body\nET WEB_SERVER Possible SQL Injection SELECT CAST in HTTP URI\nET WEB_SERVER Possible SQL Injection Attempt UPDATE SET in HTTP URI\nET WEB_SERVER Possible SQL injection obfuscated via REVERSE function in HTTP URI\nET WEB_SERVER Possible SQL Injection WAITFOR DELAY in HTTP URI\nET WEB_SERVER Possible SQL injection WAITFOR DELAY in HTTP Request Body\nET WEB_SERVER SQL Injection Local File Access Attempt Using LOAD_FILE\nET WEB_SERVER Possible SQL Injection INSERT INTO in HTTP Request Body\nET WEB_SERVER Possible SQL Injection SELECT CAST in HTTP Request Body\nET WEB_SERVER Possible SQL Injection DELETE FROM in HTTP Request Body\nET WEB_SERVER Possible SQL Injection SELECT FROM in HTTP Request Body\nET WEB_SERVER Possible SQL Injection Attempt INSERT INTO in HTTP URI\nET WEB_SERVER Possible SQL Injection Attempt SELECT FROM in HTTP URI\nING in URI Possible Blind SQL Injection Attempt\nET WEB_SERVER Possible BASE Authentication Bypass Attempt\nET WEB_SERVER ASP.NET Forms Authentication Bypass\nET WEB_SERVER Possible SQL Injection Attempt DELETE FROM in HTTP URI\nET WEB_SERVER Possible SQL Injection Attempt UNION SELECT in HTTP URI\nET WEB_SERVER Possible SQL Injection (varchar) in HTTP URI\nET WEB_SERVER Possible SQL Injection (exec) in HTTP URI\nET WEB_SERVER Possible SQL Injection Attempt Danmec related (declare) in HTTP URI\nET WEB_SERVER Possible SQL Injection INTO OUTFILE Arbitrary File Write Attempt in HTTP URI\nET WEB_SERVER Possible SQL Injection SELECT CONCAT in HTTP URI\nET WEB_SERVER Possible SQL Injection Using MSSQL sp_configure Command in HTTP URI\nET WEB_SERVER Possible SQL Injection Attempt char() Danmec related in HTTP URI\nET WEB_SERVER Possible SQL Injection (varchar2) in HTTP URI"
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 4,
+            "comment": "ET WEB_SERVER DD-WRT Information Disclosure Attempt\nET WEB_SERVER Oracle Reports DESFORMAT Information Disclosure\nET WEB_SERVER Oracle Reports XML Information Disclosure\nET WEB_SERVER Successful DD-WRT Information Disclosure"
+        },
+        {
+            "techniqueID": "T1210",
+            "score": 3,
+            "comment": "ET WEB_SERVER LANDesk Command Injection Attempt\nET WEB_SERVER Nagios statuswml.cgi Remote Arbitrary Shell Command Injection attempt\nET WEB_SERVER Oracle Reports OS Command Injection Attempt"
+        },
+        {
+            "techniqueID": "T1505",
+            "score": 10,
+            "comment": "ET WEB_SERVER Possible WebShell Access Inbound [exec] M1 (CISA AA21-259A)\nET WEB_SERVER Possible WebShell Access Inbound [upload] M1 (CISA AA21-259A)\nET WEB_SERVER Generic Webshell Accessed on Internal Compromised Server\nET WEB_SERVER Suspected FOXSHELL Variant Webshell Activity\nET WEB_SERVER Suspected FOXSHELL Variant Webshell Activity\nET WEB_SERVER Tunna Variant Webshell Activity\nET WEB_SERVER Simple JSP WebShell Landing Page\nET WEB_SERVER vonloesch JSP File Browser\nET WEB_SERVER Suspected HrServ Webshell Related Activity M1\nET WEB_SERVER Suspected HrServ Webshell Related Activity M2"
+        },
+        {
+            "techniqueID": "T1027",
+            "score": 1,
+            "comment": "ET WEB_SERVER Image Content-Type with Obfuscated PHP (Seen with C99 Shell)"
+        },
+        {
+            "techniqueID": "T1083",
+            "score": 16,
+            "comment": "ET WEB_SERVER Barracuda Spam Firewall img.pl Remote Directory Traversal Attempt\nET WEB_SERVER Barracuda Spam Firewall preview_email.cgi Remote Directory Traversal Attempt\nET WEB_SERVER HP OpenView Network Node Manager CGI Directory Traversal\nET WEB_SERVER Apache Axis2 xsd Parameter Directory Traversal Attempt\nET WEB_SERVER possible SAP Crystal Report Server 2008 path parameter Directory Traversal vulnerability\nET WEB_SERVER Possible SUPERMICRO IPMI url_redirect.cgi Directory Traversal Attempt\nET WEB_SERVER Coldfusion cfcexplorer Directory Traversal\nET WEB_SERVER ElasticSearch Directory Traversal Attempt (CVE-2015-3337)\nET WEB_SERVER Adobe ColdFusion Arbitrary File Read Vulnerability M2 - logging Module Directory Traversal Attempt (CVE-2024-20767)\nGPL WEB_SERVER Tomcat directory traversal attempt\nGPL WEB_SERVER Compaq Insight directory traversal\nGPL WEB_SERVER unicode directory traversal attempt\n5)\n5)\n5)\n5)"
+        }
+    ]
+}

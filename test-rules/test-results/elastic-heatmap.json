@@ -1,0 +1,76 @@
+{
+    "name": "elastic rules heatmap",
+    "versions": {
+        "attack": "16",
+        "navigator": "4.4.4",
+        "layer": "4.2"
+    },
+    "domain": "enterprise-attack",
+    "description": "Elastic rules heatmap",
+    "gradient": {
+        "colors": [
+            "#E0FF7F",
+            "#FF69B4",
+            "#39FF14"
+        ],
+        "maxValue": 2,
+        "minValue": 0
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1003",
+            "score": 1,
+            "comment": "credential_access_veeam_backup_dll_imageload.toml"
+        },
+        {
+            "techniqueID": "T1555",
+            "score": 1,
+            "comment": "credential_access_veeam_backup_dll_imageload.toml"
+        },
+        {
+            "techniqueID": "T1059",
+            "score": 2,
+            "comment": "credential_access_veeam_backup_dll_imageload.toml\nexecution_shell_via_child_tcp_utility_linux.toml"
+        },
+        {
+            "techniqueID": "T1127",
+            "score": 1,
+            "comment": "defense_evasion_execution_msbuild_started_by_office_app.toml"
+        },
+        {
+            "techniqueID": "T1211",
+            "score": 1,
+            "comment": "defense_evasion_potential_proot_exploits.toml"
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "comment": "discovery_suspicious_which_command_execution.toml"
+        },
+        {
+            "techniqueID": "T1071",
+            "score": 1,
+            "comment": "execution_shell_via_child_tcp_utility_linux.toml"
+        },
+        {
+            "techniqueID": "T1547",
+            "score": 1,
+            "comment": "persistence_kernel_driver_load_by_non_root.toml"
+        },
+        {
+            "techniqueID": "T1014",
+            "score": 1,
+            "comment": "persistence_kernel_driver_load_by_non_root.toml"
+        },
+        {
+            "techniqueID": "T1546",
+            "score": 1,
+            "comment": "persistence_via_windows_management_instrumentation_event_subscription.toml"
+        },
+        {
+            "techniqueID": "T1047",
+            "score": 1,
+            "comment": "persistence_via_windows_management_instrumentation_event_subscription.toml"
+        }
+    ]
+}

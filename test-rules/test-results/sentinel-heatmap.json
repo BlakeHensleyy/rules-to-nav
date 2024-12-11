@@ -1,0 +1,86 @@
+{
+    "name": "sentinel rules heatmap",
+    "versions": {
+        "attack": "16",
+        "navigator": "4.4.4",
+        "layer": "4.2"
+    },
+    "domain": "enterprise-attack",
+    "description": "Sentinel rules heatmap",
+    "gradient": {
+        "colors": [
+            "#E0FFFF",
+            "#00CED1",
+            "#00008B"
+        ],
+        "maxValue": 1,
+        "minValue": 0
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1016",
+            "score": 1,
+            "comment": "AdFind_Usage.yaml"
+        },
+        {
+            "techniqueID": "T1018",
+            "score": 1,
+            "comment": "AdFind_Usage.yaml"
+        },
+        {
+            "techniqueID": "T1069.002",
+            "score": 1,
+            "comment": "AdFind_Usage.yaml"
+        },
+        {
+            "techniqueID": "T1087.002",
+            "score": 1,
+            "comment": "AdFind_Usage.yaml"
+        },
+        {
+            "techniqueID": "T1482",
+            "score": 1,
+            "comment": "AdFind_Usage.yaml"
+        },
+        {
+            "techniqueID": "T1078.004",
+            "score": 1,
+            "comment": "ApplicationRedirectURLUpdate.yaml"
+        },
+        {
+            "techniqueID": "T1003.001",
+            "score": 1,
+            "comment": "CredentialDumpingServiceInstallation.yaml"
+        },
+        {
+            "techniqueID": "T1550.001",
+            "score": 1,
+            "comment": "FirstAppOrServicePrincipalCredential.yaml"
+        },
+        {
+            "techniqueID": "T1110",
+            "score": 1,
+            "comment": "imAuthPasswordSpray.yaml"
+        },
+        {
+            "techniqueID": "T1136",
+            "score": 1,
+            "comment": "RareApplicationConsent.yaml"
+        },
+        {
+            "techniqueID": "T1068",
+            "score": 1,
+            "comment": "RareApplicationConsent.yaml"
+        },
+        {
+            "techniqueID": "T1098",
+            "score": 1,
+            "comment": "UseraddedtoPrivilgedGroups.yaml"
+        },
+        {
+            "techniqueID": "T1078",
+            "score": 1,
+            "comment": "UseraddedtoPrivilgedGroups.yaml"
+        }
+    ]
+}

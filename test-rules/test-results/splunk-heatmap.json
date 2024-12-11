@@ -1,0 +1,76 @@
+{
+    "name": "splunk rules heatmap",
+    "versions": {
+        "attack": "16",
+        "navigator": "4.4.4",
+        "layer": "4.2"
+    },
+    "domain": "enterprise-attack",
+    "description": "Splunk rules heatmap",
+    "gradient": {
+        "colors": [
+            "#E0FFFF",
+            "#00CED1",
+            "#00008B"
+        ],
+        "maxValue": 1,
+        "minValue": 0
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1048.003",
+            "score": 1,
+            "comment": "clients_connecting_to_multiple_dns_servers.yml"
+        },
+        {
+            "techniqueID": "T1218",
+            "score": 1,
+            "comment": "detect_html_help_using_infotech_storage_handlers.yml"
+        },
+        {
+            "techniqueID": "T1218.001",
+            "score": 1,
+            "comment": "detect_html_help_using_infotech_storage_handlers.yml"
+        },
+        {
+            "techniqueID": "T1030",
+            "score": 1,
+            "comment": "linux_auditd_data_transfer_size_limits_via_split.yml"
+        },
+        {
+            "techniqueID": "T1016",
+            "score": 1,
+            "comment": "linux_auditd_system_network_configuration_discovery.yml"
+        },
+        {
+            "techniqueID": "T1114.003",
+            "score": 1,
+            "comment": "o365_suspicious_user_email_forwarding.yml"
+        },
+        {
+            "techniqueID": "T1114",
+            "score": 1,
+            "comment": "o365_suspicious_user_email_forwarding.yml"
+        },
+        {
+            "techniqueID": "T1055",
+            "score": 1,
+            "comment": "powershell_remote_thread_to_known_windows_process.yml"
+        },
+        {
+            "techniqueID": "T1562.004",
+            "score": 1,
+            "comment": "processes_created_by_netsh.yml"
+        },
+        {
+            "techniqueID": "T1546.001",
+            "score": 1,
+            "comment": "suspicious_changes_to_file_associations.yml"
+        },
+        {
+            "techniqueID": "T1078",
+            "score": 1,
+            "comment": "web_fraud___anomalous_user_clickspeed.yml"
+        }
+    ]
+}

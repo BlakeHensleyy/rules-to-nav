@@ -1,0 +1,621 @@
+{
+    "name": "sigma rules heatmap",
+    "versions": {
+        "attack": "16",
+        "navigator": "4.4.4",
+        "layer": "4.2"
+    },
+    "domain": "enterprise-attack",
+    "description": "Sigma rules heatmap",
+    "gradient": {
+        "colors": [
+            "#E0FFFF",
+            "#00CED1",
+            "#00008B"
+        ],
+        "maxValue": 27,
+        "minValue": 0
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1003",
+            "score": 6,
+            "comment": "lnx_auditd_keylogging_with_pam_d.yml\nposh_ps_hktl_rubeus.yml\nposh_ps_memorydump_getstoragediagnosticinfo.yml\nposh_ps_potential_invoke_mimikatz.yml\nproc_creation_win_registry_new_network_provider.yml\nproc_creation_win_susp_system_user_anomaly.yml"
+        },
+        {
+            "techniqueID": "T1056.001",
+            "score": 1,
+            "comment": "lnx_auditd_keylogging_with_pam_d.yml"
+        },
+        {
+            "techniqueID": "T1547.006",
+            "score": 1,
+            "comment": "lnx_auditd_load_module_insmod.yml"
+        },
+        {
+            "techniqueID": "T1136.001",
+            "score": 2,
+            "comment": "lnx_privileged_user_creation.yml\nproc_creation_win_susp_add_user_remote_desktop_group.yml"
+        },
+        {
+            "techniqueID": "T1098",
+            "score": 2,
+            "comment": "lnx_privileged_user_creation.yml\nproc_creation_win_susp_add_user_privileged_group.yml"
+        },
+        {
+            "techniqueID": "T1059.004",
+            "score": 1,
+            "comment": "lnx_shell_susp_commands.yml"
+        },
+        {
+            "techniqueID": "T1565",
+            "score": 1,
+            "comment": "posh_ps_add_dnsclient_rule.yml"
+        },
+        {
+            "techniqueID": "T1059.001",
+            "score": 27,
+            "comment": "posh_ps_adrecon_execution.yml\nposh_ps_apt_silence_eda.yml\nposh_ps_invoke_obfuscation_clip.yml\nposh_ps_invoke_obfuscation_obfuscated_iex.yml\nposh_ps_invoke_obfuscation_stdin.yml\nposh_ps_invoke_obfuscation_var.yml\nposh_ps_invoke_obfuscation_via_stdin.yml\nposh_ps_invoke_obfuscation_via_use_clip.yml\nposh_ps_invoke_obfuscation_via_use_mhsta.yml\nposh_ps_invoke_obfuscation_via_use_rundll32.yml\nposh_ps_invoke_obfuscation_via_var.yml\nposh_ps_malicious_commandlets.yml\nposh_ps_nishang_malicious_commandlets.yml\nposh_ps_ntfs_ads_access.yml\nposh_ps_powerview_malicious_commandlets.yml\nposh_ps_prompt_credentials.yml\nposh_ps_psasyncshell.yml\nposh_ps_psattack.yml\nproc_creation_win_schtasks_appdata_local_system.yml\nproc_creation_win_schtasks_powershell_persistence.yml\nproc_creation_win_schtasks_reg_loader_encoded.yml\nproc_creation_win_susp_data_exfiltration_via_cli.yml\nproc_creation_win_susp_shell_spawn_susp_program.yml\nwin_security_invoke_obfuscation_clip_services_security.yml\nwin_security_invoke_obfuscation_stdin_services_security.yml\nwin_security_invoke_obfuscation_var_services_security.yml\nwin_security_invoke_obfuscation_via_use_rundll32_services_security.yml"
+        },
+        {
+            "techniqueID": "T1562.001",
+            "score": 18,
+            "comment": "posh_ps_amsi_bypass_pattern_nov22.yml\nposh_ps_disable_windows_optional_feature.yml\nproc_creation_win_pua_cleanwipe.yml\nproc_creation_win_registry_office_disable_python_security_warnings.yml\nproc_creation_win_reg_add_safeboot.yml\nproc_creation_win_reg_delete_safeboot.yml\nproc_creation_win_reg_delete_services.yml\nproc_creation_win_reg_disable_sec_services.yml\nproc_creation_win_reg_susp_paths.yml\nproc_creation_win_reg_volsnap_disable.yml\nproc_creation_win_reg_windows_defender_tamper.yml\nproc_creation_win_susp_disable_raccine.yml\nproc_creation_win_sysinternals_pssuspend_susp_execution.yml\nproc_creation_win_sysinternals_sysmon_uninstall.yml\nproc_creation_win_taskkill_sep.yml\nproc_creation_win_uninstall_crowdstrike_falcon.yml\nproc_creation_win_wmic_uninstall_security_products.yml\nwin_security_net_ntlm_downgrade.yml"
+        },
+        {
+            "techniqueID": "T1071.004",
+            "score": 1,
+            "comment": "posh_ps_apt_silence_eda.yml"
+        },
+        {
+            "techniqueID": "T1572",
+            "score": 3,
+            "comment": "posh_ps_apt_silence_eda.yml\nproc_creation_win_pua_ngrok.yml\nproc_creation_win_ssh_rdp_tunneling.yml"
+        },
+        {
+            "techniqueID": "T1529",
+            "score": 1,
+            "comment": "posh_ps_apt_silence_eda.yml"
+        },
+        {
+            "techniqueID": "T1070",
+            "score": 4,
+            "comment": "posh_ps_clearing_windows_console_history.yml\nposh_ps_etw_trace_evasion.yml\nproc_creation_win_susp_etw_trace_evasion.yml\nproc_creation_win_susp_shadow_copies_deletion.yml"
+        },
+        {
+            "techniqueID": "T1070.003",
+            "score": 2,
+            "comment": "posh_ps_clearing_windows_console_history.yml\nposh_ps_disable_psreadline_command_history.yml"
+        },
+        {
+            "techniqueID": "T1556.002",
+            "score": 1,
+            "comment": "posh_ps_copy_item_system_directory.yml"
+        },
+        {
+            "techniqueID": "T1003.003",
+            "score": 4,
+            "comment": "posh_ps_create_volume_shadow_copy.yml\nproc_creation_win_pua_ditsnap.yml\nproc_creation_win_susp_ntds.yml\nproc_creation_win_sysinternals_adexplorer_susp_execution.yml"
+        },
+        {
+            "techniqueID": "T1562.006",
+            "score": 2,
+            "comment": "posh_ps_etw_trace_evasion.yml\nproc_creation_win_susp_etw_trace_evasion.yml"
+        },
+        {
+            "techniqueID": "T1558.003",
+            "score": 1,
+            "comment": "posh_ps_hktl_rubeus.yml"
+        },
+        {
+            "techniqueID": "T1550.003",
+            "score": 1,
+            "comment": "posh_ps_hktl_rubeus.yml"
+        },
+        {
+            "techniqueID": "T1048",
+            "score": 2,
+            "comment": "posh_ps_invoke_dnsexfiltration.yml\nproc_creation_win_susp_redirect_local_admin_share.yml"
+        },
+        {
+            "techniqueID": "T1027",
+            "score": 17,
+            "comment": "posh_ps_invoke_obfuscation_clip.yml\nposh_ps_invoke_obfuscation_obfuscated_iex.yml\nposh_ps_invoke_obfuscation_stdin.yml\nposh_ps_invoke_obfuscation_var.yml\nposh_ps_invoke_obfuscation_via_stdin.yml\nposh_ps_invoke_obfuscation_via_use_clip.yml\nposh_ps_invoke_obfuscation_via_use_mhsta.yml\nposh_ps_invoke_obfuscation_via_use_rundll32.yml\nposh_ps_invoke_obfuscation_via_var.yml\nproc_creation_win_renamed_autoit.yml\nproc_creation_win_susp_cli_obfuscation_unicode_img.yml\nproc_creation_win_susp_system_user_anomaly.yml\nwin_security_invoke_obfuscation_clip_services_security.yml\nwin_security_invoke_obfuscation_obfuscated_iex_services_security.yml\nwin_security_invoke_obfuscation_stdin_services_security.yml\nwin_security_invoke_obfuscation_var_services_security.yml\nwin_security_invoke_obfuscation_via_use_rundll32_services_security.yml"
+        },
+        {
+            "techniqueID": "T1482",
+            "score": 2,
+            "comment": "posh_ps_malicious_commandlets.yml\nproc_creation_win_renamed_adfind.yml"
+        },
+        {
+            "techniqueID": "T1087",
+            "score": 5,
+            "comment": "posh_ps_malicious_commandlets.yml\nproc_creation_win_pua_seatbelt.yml\nproc_creation_win_webshell_chopper.yml\nproc_creation_win_webshell_hacking.yml\nproc_creation_win_webshell_recon_commands_and_processes.yml"
+        },
+        {
+            "techniqueID": "T1087.001",
+            "score": 1,
+            "comment": "posh_ps_malicious_commandlets.yml"
+        },
+        {
+            "techniqueID": "T1087.002",
+            "score": 3,
+            "comment": "posh_ps_malicious_commandlets.yml\nproc_creation_win_renamed_adfind.yml\nwin_security_account_discovery.yml"
+        },
+        {
+            "techniqueID": "T1069.001",
+            "score": 1,
+            "comment": "posh_ps_malicious_commandlets.yml"
+        },
+        {
+            "techniqueID": "T1069.002",
+            "score": 2,
+            "comment": "posh_ps_malicious_commandlets.yml\nproc_creation_win_renamed_adfind.yml"
+        },
+        {
+            "techniqueID": "T1069",
+            "score": 1,
+            "comment": "posh_ps_malicious_commandlets.yml"
+        },
+        {
+            "techniqueID": "T1564.004",
+            "score": 2,
+            "comment": "posh_ps_ntfs_ads_access.yml\nproc_creation_win_rundll32_ads_stored_dll_execution.yml"
+        },
+        {
+            "techniqueID": "T1137.006",
+            "score": 1,
+            "comment": "posh_ps_office_comobject_registerxll.yml"
+        },
+        {
+            "techniqueID": "T1590.001",
+            "score": 1,
+            "comment": "proc_creation_win_pua_crassus.yml"
+        },
+        {
+            "techniqueID": "T1587.001",
+            "score": 4,
+            "comment": "proc_creation_win_pua_csexec.yml\nproc_creation_win_sysinternals_psexec_paexec_escalate_system.yml\nproc_creation_win_sysinternals_psexec_remote_execution.yml\nproc_creation_win_sysinternals_susp_psexec_paexec_flags.yml"
+        },
+        {
+            "techniqueID": "T1569.002",
+            "score": 7,
+            "comment": "proc_creation_win_pua_csexec.yml\nproc_creation_win_pua_nircmd_as_system.yml\nproc_creation_win_pua_nsudo.yml\nproc_creation_win_pua_runxcmd.yml\nproc_creation_win_rundll32_without_parameters.yml\nwin_security_cobaltstrike_service_installs.yml\nwin_security_metasploit_or_impacket_smb_psexec_service_install.yml"
+        },
+        {
+            "techniqueID": "T1027.005",
+            "score": 1,
+            "comment": "proc_creation_win_pua_defendercheck.yml"
+        },
+        {
+            "techniqueID": "T1090",
+            "score": 3,
+            "comment": "proc_creation_win_pua_frp.yml\nproc_creation_win_pua_iox.yml\nproc_creation_win_pua_nps.yml"
+        },
+        {
+            "techniqueID": "T1095",
+            "score": 1,
+            "comment": "proc_creation_win_pua_netcat.yml"
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 2,
+            "comment": "proc_creation_win_pua_nimgrab.yml\nproc_creation_win_susp_download_office_domain.yml"
+        },
+        {
+            "techniqueID": "T1567.002",
+            "score": 1,
+            "comment": "proc_creation_win_pua_rclone_execution.yml"
+        },
+        {
+            "techniqueID": "T1526",
+            "score": 1,
+            "comment": "proc_creation_win_pua_seatbelt.yml"
+        },
+        {
+            "techniqueID": "T1083",
+            "score": 1,
+            "comment": "proc_creation_win_pua_seatbelt.yml"
+        },
+        {
+            "techniqueID": "T1059",
+            "score": 9,
+            "comment": "proc_creation_win_pua_wsudo_susp_execution.yml\nproc_creation_win_python_pty_spawn.yml\nproc_creation_win_susp_execution_from_public_folder_as_parent.yml\nproc_creation_win_susp_progname.yml\nproc_creation_win_susp_script_exec_from_env_folder.yml\nproc_creation_win_susp_script_exec_from_temp.yml\nproc_creation_win_vmware_toolbox_cmd_persistence_susp.yml\nproc_creation_win_vmware_vmtoolsd_susp_child_process.yml\nproc_creation_win_winget_add_insecure_custom_source.yml"
+        },
+        {
+            "techniqueID": "T1560.001",
+            "score": 1,
+            "comment": "proc_creation_win_rar_compression_with_password.yml"
+        },
+        {
+            "techniqueID": "T1003.001",
+            "score": 7,
+            "comment": "proc_creation_win_rdrleakdiag_process_dumping.yml\nproc_creation_win_renamed_createdump.yml\nproc_creation_win_rundll32_process_dump_via_comsvcs.yml\nproc_creation_win_susp_lsass_dmp_cli_keywords.yml\nproc_creation_win_sysinternals_procdump_evasion.yml\nproc_creation_win_sysinternals_procdump_lsass.yml\nproc_creation_win_werfault_lsass_shtinkering.yml"
+        },
+        {
+            "techniqueID": "T1012",
+            "score": 1,
+            "comment": "proc_creation_win_regedit_export_critical_keys.yml"
+        },
+        {
+            "techniqueID": "T1112",
+            "score": 10,
+            "comment": "proc_creation_win_regedit_import_keys_ads.yml\nproc_creation_win_regini_ads.yml\nproc_creation_win_reg_lsa_disable_restricted_admin.yml\nproc_creation_win_reg_nolmhash.yml\nproc_creation_win_reg_rdp_keys_tamper.yml\nproc_creation_win_reg_susp_paths.yml\nproc_creation_win_rundll32_susp_shimcache_flush.yml\nproc_creation_win_susp_non_priv_reg_or_ps.yml\nwin_security_net_ntlm_downgrade.yml\nwin_security_sysmon_channel_reference_deletion.yml"
+        },
+        {
+            "techniqueID": "T1548",
+            "score": 2,
+            "comment": "proc_creation_win_regedit_trustedinstaller.yml\nproc_creation_win_susp_abusing_debug_privilege.yml"
+        },
+        {
+            "techniqueID": "T1546.008",
+            "score": 2,
+            "comment": "proc_creation_win_registry_install_reg_debugger_backdoor.yml\nproc_creation_win_wmic_namespace_defender.yml"
+        },
+        {
+            "techniqueID": "T1037.001",
+            "score": 2,
+            "comment": "proc_creation_win_registry_logon_script.yml\nproc_creation_win_userinit_uncommon_child_processes.yml"
+        },
+        {
+            "techniqueID": "T1574.011",
+            "score": 3,
+            "comment": "proc_creation_win_registry_privilege_escalation_via_service_key.yml\nproc_creation_win_sc_change_sevice_image_path_by_non_admin.yml\nproc_creation_win_sc_sdset_hide_sevices.yml"
+        },
+        {
+            "techniqueID": "T1218",
+            "score": 8,
+            "comment": "proc_creation_win_registry_provlaunch_provisioning_command.yml\nproc_creation_win_renamed_dctask64.yml\nproc_creation_win_renamed_megasync.yml\nproc_creation_win_sdiagnhost_susp_child.yml\nproc_creation_win_setres_uncommon_child_process.yml\nproc_creation_win_stordiag_susp_child_process.yml\nproc_creation_win_susp_shell_spawn_susp_program.yml\nproc_creation_win_susp_workfolders.yml"
+        },
+        {
+            "techniqueID": "T1218.010",
+            "score": 6,
+            "comment": "proc_creation_win_regsvr32_http_ip_pattern.yml\nproc_creation_win_regsvr32_remote_share.yml\nproc_creation_win_regsvr32_susp_child_process.yml\nproc_creation_win_regsvr32_susp_exec_path_2.yml\nproc_creation_win_regsvr32_susp_extensions.yml\nproc_creation_win_wmic_susp_execution_via_office_process.yml"
+        },
+        {
+            "techniqueID": "T1486",
+            "score": 2,
+            "comment": "proc_creation_win_reg_bitlocker.yml\nproc_creation_win_renamed_gpg4win.yml"
+        },
+        {
+            "techniqueID": "T1003.002",
+            "score": 1,
+            "comment": "proc_creation_win_reg_dumping_sensitive_hives.yml"
+        },
+        {
+            "techniqueID": "T1003.004",
+            "score": 1,
+            "comment": "proc_creation_win_reg_dumping_sensitive_hives.yml"
+        },
+        {
+            "techniqueID": "T1003.005",
+            "score": 1,
+            "comment": "proc_creation_win_reg_dumping_sensitive_hives.yml"
+        },
+        {
+            "techniqueID": "T1562.010",
+            "score": 1,
+            "comment": "proc_creation_win_reg_lsa_ppl_protection_disabled.yml"
+        },
+        {
+            "techniqueID": "T1021.001",
+            "score": 3,
+            "comment": "proc_creation_win_reg_rdp_keys_tamper.yml\nproc_creation_win_susp_add_user_remote_desktop_group.yml\nproc_creation_win_tscon_rdp_redirect.yml"
+        },
+        {
+            "techniqueID": "T1219",
+            "score": 3,
+            "comment": "proc_creation_win_remote_access_tools_anydesk_silent_install.yml\nproc_creation_win_remote_access_tools_anydesk_susp_exec.yml\nproc_creation_win_tscon_localsystem.yml"
+        },
+        {
+            "techniqueID": "T1018",
+            "score": 4,
+            "comment": "proc_creation_win_renamed_adfind.yml\nproc_creation_win_webshell_chopper.yml\nproc_creation_win_webshell_hacking.yml\nproc_creation_win_webshell_recon_commands_and_processes.yml"
+        },
+        {
+            "techniqueID": "T1036.003",
+            "score": 6,
+            "comment": "proc_creation_win_renamed_binary_highly_relevant.yml\nproc_creation_win_renamed_browsercore.yml\nproc_creation_win_renamed_jusched.yml\nproc_creation_win_renamed_msdt.yml\nproc_creation_win_renamed_sysinternals_procdump.yml\nproc_creation_win_susp_copy_system_dir_lolbin.yml"
+        },
+        {
+            "techniqueID": "T1528",
+            "score": 1,
+            "comment": "proc_creation_win_renamed_browsercore.yml"
+        },
+        {
+            "techniqueID": "T1036",
+            "score": 10,
+            "comment": "proc_creation_win_renamed_createdump.yml\nproc_creation_win_renamed_dctask64.yml\nproc_creation_win_renamed_plink.yml\nproc_creation_win_rundll32_process_dump_via_comsvcs.yml\nproc_creation_win_sdiagnhost_susp_child.yml\nproc_creation_win_susp_execution_path.yml\nproc_creation_win_susp_parents.yml\nproc_creation_win_sysinternals_procdump_evasion.yml\nproc_creation_win_sysinternals_procdump_lsass.yml\nproc_creation_win_taskmgr_localsystem.yml"
+        },
+        {
+            "techniqueID": "T1055.001",
+            "score": 2,
+            "comment": "proc_creation_win_renamed_dctask64.yml\nproc_creation_win_renamed_mavinject.yml"
+        },
+        {
+            "techniqueID": "T1202",
+            "score": 6,
+            "comment": "proc_creation_win_renamed_dctask64.yml\nproc_creation_win_renamed_paexec.yml\nproc_creation_win_rundll32_no_params.yml\nproc_creation_win_setres_uncommon_child_process.yml\nproc_creation_win_splwow64_cli_anomaly.yml\nproc_creation_win_susp_service_dir.yml"
+        },
+        {
+            "techniqueID": "T1218.013",
+            "score": 1,
+            "comment": "proc_creation_win_renamed_mavinject.yml"
+        },
+        {
+            "techniqueID": "T1588.002",
+            "score": 1,
+            "comment": "proc_creation_win_renamed_sysinternals_debugview.yml"
+        },
+        {
+            "techniqueID": "T1485",
+            "score": 2,
+            "comment": "proc_creation_win_renamed_sysinternals_sdelete.yml\nproc_creation_win_sysinternals_sdelete.yml"
+        },
+        {
+            "techniqueID": "T1574.002",
+            "score": 2,
+            "comment": "proc_creation_win_renamed_vmnat.yml\nproc_creation_win_susp_task_folder_evasion.yml"
+        },
+        {
+            "techniqueID": "T1033",
+            "score": 6,
+            "comment": "proc_creation_win_renamed_whoami.yml\nproc_creation_win_susp_whoami_as_param.yml\nproc_creation_win_webshell_chopper.yml\nproc_creation_win_webshell_hacking.yml\nproc_creation_win_webshell_recon_commands_and_processes.yml\nproc_creation_win_whoami_priv_discovery.yml"
+        },
+        {
+            "techniqueID": "T1055",
+            "score": 2,
+            "comment": "proc_creation_win_rundll32_inline_vbs.yml\nproc_creation_win_svchost_execution_with_no_cli_flags.yml"
+        },
+        {
+            "techniqueID": "T1555.004",
+            "score": 1,
+            "comment": "proc_creation_win_rundll32_keymgr.yml"
+        },
+        {
+            "techniqueID": "T1212",
+            "score": 1,
+            "comment": "proc_creation_win_rundll32_ntlmrelay.yml"
+        },
+        {
+            "techniqueID": "T1546.015",
+            "score": 1,
+            "comment": "proc_creation_win_rundll32_registered_com_objects.yml"
+        },
+        {
+            "techniqueID": "T1218.011",
+            "score": 7,
+            "comment": "proc_creation_win_rundll32_shell32_susp_execution.yml\nproc_creation_win_rundll32_spawn_explorer.yml\nproc_creation_win_rundll32_susp_control_dll_load.yml\nproc_creation_win_rundll32_susp_execution_with_image_extension.yml\nproc_creation_win_rundll32_sys.yml\nproc_creation_win_rundll32_unc_path.yml\nproc_creation_win_susp_powershell_execution_via_dll.yml"
+        },
+        {
+            "techniqueID": "T1021.002",
+            "score": 7,
+            "comment": "proc_creation_win_rundll32_unc_path.yml\nproc_creation_win_rundll32_without_parameters.yml\nwin_security_cobaltstrike_service_installs.yml\nwin_security_dcom_iertutil_dll_hijack.yml\nwin_security_lm_namedpipe.yml\nwin_security_metasploit_or_impacket_smb_psexec_service_install.yml\nwin_security_wmiprvse_wbemcomn_dll_hijack.yml"
+        },
+        {
+            "techniqueID": "T1048.003",
+            "score": 1,
+            "comment": "proc_creation_win_rundll32_webdav_client_susp_execution.yml"
+        },
+        {
+            "techniqueID": "T1570",
+            "score": 2,
+            "comment": "proc_creation_win_rundll32_without_parameters.yml\nwin_security_metasploit_or_impacket_smb_psexec_service_install.yml"
+        },
+        {
+            "techniqueID": "T1053.005",
+            "score": 10,
+            "comment": "proc_creation_win_schtasks_appdata_local_system.yml\nproc_creation_win_schtasks_change.yml\nproc_creation_win_schtasks_creation_temp_folder.yml\nproc_creation_win_schtasks_folder_combos.yml\nproc_creation_win_schtasks_one_time_only_midnight_task.yml\nproc_creation_win_schtasks_powershell_persistence.yml\nproc_creation_win_schtasks_reg_loader_encoded.yml\nproc_creation_win_schtasks_schedule_type.yml\nproc_creation_win_schtasks_system.yml\nwin_security_gpo_scheduledtasks.yml"
+        },
+        {
+            "techniqueID": "T1489",
+            "score": 4,
+            "comment": "proc_creation_win_schtasks_delete.yml\nproc_creation_win_schtasks_delete_all.yml\nproc_creation_win_schtasks_disable.yml\nproc_creation_win_susp_service_tamper.yml"
+        },
+        {
+            "techniqueID": "T1047",
+            "score": 4,
+            "comment": "proc_creation_win_scrcons_susp_child_process.yml\nproc_creation_win_wmic_susp_execution_via_office_process.yml\nproc_creation_win_wmic_susp_process_creation.yml\nwin_security_wmiprvse_wbemcomn_dll_hijack.yml"
+        },
+        {
+            "techniqueID": "T1543.003",
+            "score": 5,
+            "comment": "proc_creation_win_sc_sdset_allow_service_changes.yml\nproc_creation_win_sc_sdset_deny_service_access.yml\nproc_creation_win_sc_service_path_modification.yml\nproc_creation_win_susp_service_creation.yml\nwin_security_cobaltstrike_service_installs.yml"
+        },
+        {
+            "techniqueID": "T1555",
+            "score": 1,
+            "comment": "proc_creation_win_servu_susp_child_process.yml"
+        },
+        {
+            "techniqueID": "T1203",
+            "score": 1,
+            "comment": "proc_creation_win_spoolsv_susp_child_processes.yml"
+        },
+        {
+            "techniqueID": "T1068",
+            "score": 1,
+            "comment": "proc_creation_win_spoolsv_susp_child_processes.yml"
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 3,
+            "comment": "proc_creation_win_sqlcmd_veeam_dump.yml\nproc_creation_win_sqlite_chromium_profile_data.yml\nproc_creation_win_sqlite_firefox_gecko_profile_data.yml"
+        },
+        {
+            "techniqueID": "T1539",
+            "score": 2,
+            "comment": "proc_creation_win_sqlite_chromium_profile_data.yml\nproc_creation_win_sqlite_firefox_gecko_profile_data.yml"
+        },
+        {
+            "techniqueID": "T1555.003",
+            "score": 1,
+            "comment": "proc_creation_win_sqlite_chromium_profile_data.yml"
+        },
+        {
+            "techniqueID": "T1133",
+            "score": 1,
+            "comment": "proc_creation_win_susp_add_user_remote_desktop_group.yml"
+        },
+        {
+            "techniqueID": "T1566",
+            "score": 1,
+            "comment": "proc_creation_win_susp_archiver_iso_phishing.yml"
+        },
+        {
+            "techniqueID": "T1134.002",
+            "score": 2,
+            "comment": "proc_creation_win_susp_child_process_as_system_.yml\nwin_security_meterpreter_or_cobaltstrike_getsystem_service_install.yml"
+        },
+        {
+            "techniqueID": "T1496",
+            "score": 1,
+            "comment": "proc_creation_win_susp_crypto_mining_monero.yml"
+        },
+        {
+            "techniqueID": "T1566.001",
+            "score": 1,
+            "comment": "proc_creation_win_susp_double_extension.yml"
+        },
+        {
+            "techniqueID": "T1036.007",
+            "score": 1,
+            "comment": "proc_creation_win_susp_double_extension_parent.yml"
+        },
+        {
+            "techniqueID": "T1608",
+            "score": 1,
+            "comment": "proc_creation_win_susp_download_office_domain.yml"
+        },
+        {
+            "techniqueID": "T1562",
+            "score": 1,
+            "comment": "proc_creation_win_susp_etw_modification_cmdline.yml"
+        },
+        {
+            "techniqueID": "T1070.001",
+            "score": 1,
+            "comment": "proc_creation_win_susp_eventlog_clear.yml"
+        },
+        {
+            "techniqueID": "T1562.002",
+            "score": 1,
+            "comment": "proc_creation_win_susp_eventlog_clear.yml"
+        },
+        {
+            "techniqueID": "T1564",
+            "score": 1,
+            "comment": "proc_creation_win_susp_execution_from_public_folder_as_parent.yml"
+        },
+        {
+            "techniqueID": "T1615",
+            "score": 1,
+            "comment": "proc_creation_win_susp_gather_network_info_execution.yml"
+        },
+        {
+            "techniqueID": "T1059.005",
+            "score": 2,
+            "comment": "proc_creation_win_susp_gather_network_info_execution.yml\nproc_creation_win_susp_shell_spawn_susp_program.yml"
+        },
+        {
+            "techniqueID": "T1106",
+            "score": 1,
+            "comment": "proc_creation_win_susp_inline_win_api_access.yml"
+        },
+        {
+            "techniqueID": "T1021",
+            "score": 1,
+            "comment": "proc_creation_win_susp_priv_escalation_via_named_pipe.yml"
+        },
+        {
+            "techniqueID": "T1036.002",
+            "score": 1,
+            "comment": "proc_creation_win_susp_right_to_left_override.yml"
+        },
+        {
+            "techniqueID": "T1490",
+            "score": 3,
+            "comment": "proc_creation_win_susp_sensitive_file_access_shadowcopy.yml\nproc_creation_win_susp_shadow_copies_deletion.yml\nproc_creation_win_wbadmin_delete_all_backups.yml"
+        },
+        {
+            "techniqueID": "T1134",
+            "score": 1,
+            "comment": "proc_creation_win_susp_system_user_anomaly.yml"
+        },
+        {
+            "techniqueID": "T1190",
+            "score": 3,
+            "comment": "proc_creation_win_svchost_termserv_proc_spawn.yml\nproc_creation_win_webshell_susp_process_spawned_from_webserver.yml\nproc_creation_win_winrm_susp_child_process.yml"
+        },
+        {
+            "techniqueID": "T1210",
+            "score": 1,
+            "comment": "proc_creation_win_svchost_termserv_proc_spawn.yml"
+        },
+        {
+            "techniqueID": "T1552.001",
+            "score": 1,
+            "comment": "proc_creation_win_sysinternals_adexplorer_susp_execution.yml"
+        },
+        {
+            "techniqueID": "T1563.002",
+            "score": 1,
+            "comment": "proc_creation_win_tscon_rdp_redirect.yml"
+        },
+        {
+            "techniqueID": "T1548.002",
+            "score": 19,
+            "comment": "proc_creation_win_uac_bypass_changepk_slui.yml\nproc_creation_win_uac_bypass_cleanmgr.yml\nproc_creation_win_uac_bypass_cmstp.yml\nproc_creation_win_uac_bypass_cmstp_com_object_access.yml\nproc_creation_win_uac_bypass_computerdefaults.yml\nproc_creation_win_uac_bypass_consent_comctl32.yml\nproc_creation_win_uac_bypass_dismhost.yml\nproc_creation_win_uac_bypass_fodhelper.yml\nproc_creation_win_uac_bypass_icmluautil.yml\nproc_creation_win_uac_bypass_idiagnostic_profile.yml\nproc_creation_win_uac_bypass_ieinstal.yml\nproc_creation_win_uac_bypass_msconfig_gui.yml\nproc_creation_win_uac_bypass_ntfs_reparse_point.yml\nproc_creation_win_uac_bypass_pkgmgr_dism.yml\nproc_creation_win_uac_bypass_trustedpath.yml\nproc_creation_win_uac_bypass_winsat.yml\nproc_creation_win_uac_bypass_wmp.yml\nproc_creation_win_uac_bypass_wsreset.yml\nproc_creation_win_uac_bypass_wsreset_integrity_level.yml"
+        },
+        {
+            "techniqueID": "T1218.003",
+            "score": 2,
+            "comment": "proc_creation_win_uac_bypass_cmstp.yml\nproc_creation_win_uac_bypass_cmstp_com_object_access.yml"
+        },
+        {
+            "techniqueID": "T1021.005",
+            "score": 1,
+            "comment": "proc_creation_win_ultravnc_susp_execution.yml"
+        },
+        {
+            "techniqueID": "T1071.001",
+            "score": 1,
+            "comment": "proc_creation_win_vscode_tunnel_renamed_execution.yml"
+        },
+        {
+            "techniqueID": "T1124",
+            "score": 1,
+            "comment": "proc_creation_win_w32tm.yml"
+        },
+        {
+            "techniqueID": "T1505.003",
+            "score": 5,
+            "comment": "proc_creation_win_webshell_chopper.yml\nproc_creation_win_webshell_hacking.yml\nproc_creation_win_webshell_recon_commands_and_processes.yml\nproc_creation_win_webshell_susp_process_spawned_from_webserver.yml\nproc_creation_win_webshell_tool_recon.yml"
+        },
+        {
+            "techniqueID": "T1546.003",
+            "score": 2,
+            "comment": "proc_creation_win_wmic_eventconsumer_creation.yml\nproc_creation_win_wmi_backdoor_exchange_transport_agent.yml"
+        },
+        {
+            "techniqueID": "T1204.002",
+            "score": 1,
+            "comment": "proc_creation_win_wmic_susp_execution_via_office_process.yml"
+        },
+        {
+            "techniqueID": "T1021.003",
+            "score": 1,
+            "comment": "win_security_dcom_iertutil_dll_hijack.yml"
+        },
+        {
+            "techniqueID": "T1134.001",
+            "score": 1,
+            "comment": "win_security_meterpreter_or_cobaltstrike_getsystem_service_install.yml"
+        },
+        {
+            "techniqueID": "T1187",
+            "score": 1,
+            "comment": "win_security_petitpotam_susp_tgt_request.yml"
+        }
+    ]
+}
