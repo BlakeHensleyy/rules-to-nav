@@ -32,13 +32,10 @@ def parse(techniques_to_rules, score_to_rules, calc_score_severity, num_rules_us
     status_end = max(elastic_maturity_eq.values()) if args.status_end == 'highest_status' else elastic_maturity_eq[args.status_end]
     rule_files = glob.glob(os.path.join(args.rules_dir, "**/*.toml"), recursive=True)
 
-    # TODO: get this to work with subtechniques... without adding 20+ lines of code.
     for rule_file in rule_files:
         with open(rule_file, encoding='utf-8') as f:
             rule = toml.load(f)
-
             mitre_tech_exists = False
-
             # Check if 'rule' -> 'threat' is a list and handle it accordingly
             if isinstance(rule['rule'].get('threat', []), list):
                 for threat in rule['rule']['threat']:
@@ -46,27 +43,43 @@ def parse(techniques_to_rules, score_to_rules, calc_score_severity, num_rules_us
                         threat_techniques = threat.get('technique', [])
                         for technique in threat_techniques:
                             if isinstance(technique, dict):
-                                technique_id = technique.get('id', None)
-                                if technique_id and technique_id.startswith("T"):  # Ensure it's a valid technique ID
-                                    status_name = rule.get('metadata', {}).get(status_var, "development") # set maturity to development by default
-                                    status_nb = elastic_maturity_eq.get(status_name, 2)
+                                if 'subtechnique' in technique.keys() and len(technique['subtechnique']) > 0:
+                                    for subtech in technique['subtechnique']:
+                                        technique_id = subtech.get('id', None)
+                                        if technique_id and technique_id.startswith("T"):  # Ensure it's a valid technique ID
+                                            status_name = rule.get('metadata', {}).get(status_var, "development") # set maturity to development by default
+                                            status_nb = elastic_maturity_eq.get(status_name, 2)
 
-                                    if status_nb < status_start or status_nb > status_end:
-                                        sys.stderr.write(f"Ignoring rule {rule_file} due to maturity level: {status_name}\n")
-                                        continue
+                                            if status_nb < status_start or status_nb > status_end:
+                                                sys.stderr.write(f"Ignoring rule {rule_file} due to maturity level: {status_name}\n")
+                                                continue
 
-                                    severity = rule['rule'].get(severity_var, None)
-                                    mitre_tech_exists = True
-                                    num_rules_used += 1
-                                    if technique_id not in techniques_to_rules:
-                                        techniques_to_rules[technique_id] = []
-                                        score_to_rules[technique_id] = []
-                                    techniques_to_rules[technique_id].append(os.path.basename(rule_file))
-                                    score_to_rules[technique_id].append(elastic_severity_eq.get(severity, 0))
-                                    if args.level_score:
-                                        calc_score_severity = max(calc_score_severity, sum(score_to_rules[technique_id]))
-                                    else:
-                                        calc_score_severity = max(calc_score_severity, len(techniques_to_rules[technique_id]))
+                                            severity = rule['rule'].get(severity_var, None)
+                                            mitre_tech_exists = True
+                                            num_rules_used += 1
+                                else:
+                                    technique_id = technique.get('id', None)
+                                    if technique_id and technique_id.startswith("T"):
+                                        status_name = rule.get('metadata', {}).get(status_var, "development")
+                                        status_nb = elastic_maturity_eq.get(status_name, 2)
+
+                                        if status_nb < status_start or status_nb > status_end:
+                                            sys.stderr.write(f"Ignoring rule {rule_file} due to maturity level: {status_name}\n")
+                                            continue
+
+                                        severity = rule['rule'].get(severity_var, None)
+                                        mitre_tech_exists = True
+                                        num_rules_used += 1
+
+                                if technique_id not in techniques_to_rules:
+                                    techniques_to_rules[technique_id] = []
+                                    score_to_rules[technique_id] = []
+                                techniques_to_rules[technique_id].append(os.path.basename(rule_file))
+                                score_to_rules[technique_id].append(elastic_severity_eq.get(severity, 0))
+                                if args.level_score:
+                                    calc_score_severity = max(calc_score_severity, sum(score_to_rules[technique_id]))
+                                else:
+                                    calc_score_severity = max(calc_score_severity, len(techniques_to_rules[technique_id]))
             if not mitre_tech_exists:
                 sys.stderr.write(f"Ignoring rule {rule_file} due to no techniques found in {mitre_var}\n")
                 num_rules_no_techniques += 1
