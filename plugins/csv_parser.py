@@ -12,7 +12,12 @@ def parse(techniques_to_rules, score_to_rules, calc_score_severity, num_rules_us
 
     with open(args.input_csv, newline='') as csvfile:
         reader = csv.reader(csvfile)
-        header = next(reader)  # Skip the header row
+        header = next(reader)  
+        if (header[0] == "Attack ID" and header[1] == "rule name"):
+            header = next(reader)  # Skip the header row
+        else:
+            csvfile.seek(0)
+            reader = csv.reader(csvfile)
 
         for row in reader:
             if len(row) < 2:
